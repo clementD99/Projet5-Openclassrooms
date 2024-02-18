@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Print it ! - Impressions d'entreprise</title>
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,12 +24,21 @@
     </header>
     <main>
       <div id="banner">
+        <!--Flèche gauche-->
+        <div class="arrow arrow_left"><img src="./images/arrow_left.png"></div>
         <img
           class="banner-img"
-          src="./images/slideshow/slide1.jpg"
+          src="./images/slide1.jpg"
           alt="Banner Print-it">
+          <!--Flèche droite-->
+          <div class="arrow arrow_right"><img src="./images/arrow_right.png"></div>
         <p>Impressions tous formats <span>en boutique et en ligne</span></p>
-        <div class="dots"></div>
+        <div class="dots">
+          <span class="dot dot_selected"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
       </div>
       <section id="about-us" class="container">
         <div>
@@ -168,8 +177,8 @@
       </div>
       <div>
         <p>
-          5, rue Yves Noël,35200 Rennes<br />
-          <img src="./images/metro.png" alt="metro" /> Clémenceau
+          5, rue Yves Noël, 35200 Rennes<br>
+          <img src="./images/metro.png" alt="metro"> Clémenceau
         </p>
       </div>
       <div>
