@@ -18,21 +18,31 @@
         <img
           class="logo"
           src="./images/logo.png"
-          alt="Print it ! Impressions d'entreprises">
+          alt="Print it ! Impressions d'entreprises"
+        />
       </h1>
       <a class="btn devis" href="mailto:contact@print-it.tld">Devis</a>
     </header>
     <main>
       <div id="banner">
         <!--Flèche gauche-->
-        <div class="arrow arrow_left"><img src="./images/arrow_left.png"></div>
-        <img
-          class="banner-img"
-          src="./images/slide1.jpg"
-          alt="Banner Print-it">
-          <!--Flèche droite-->
-          <div class="arrow arrow_right"><img src="./images/arrow_right.png"></div>
-        <p>Impressions tous formats <span>en boutique et en ligne</span></p>
+        <div id="prevSlide" class="arrow arrow_left" alt="flèche gauche">
+          <img src="./images/arrow_left.png" />
+        </div>
+        <!-- <div id="carousel" class="carousel"> -->
+          <img
+            class="banner-img"
+            src="./images/slide1.jpg"
+            alt="Banner Print-it"
+          />
+        <!-- </div> -->
+        <!--Flèche droite-->
+        <div id="nextSlide" class="arrow arrow_right" alt="flèche droite">
+          <img src="./images/arrow_right.png">
+        </div>
+        <p id="tagLine">
+          Impressions tous formats <span>en boutique et en ligne</span>
+        </p>
         <div class="dots">
           <span class="dot dot_selected"></span>
           <span class="dot"></span>
@@ -93,10 +103,7 @@
         <h2>Pourquoi faire appel à nous?</h2>
         <div>
           <article>
-            <img
-              src="./images/proximity-icon.png"
-              alt="Icone Proximité"
-            />
+            <img src="./images/proximity-icon.png" alt="Icone Proximité" />
             <h3>Proximité</h3>
             <p>
               Facile d’accès, une équipe compétente et à l'écoute des clients
@@ -148,11 +155,7 @@
               <p>
                 5, rue Yves Noël,<br />
                 35200 Rennes<br />
-                <img
-                  class="inline-icon"
-                  src="./images/metro.png"
-                  alt="metro"
-                />
+                <img class="inline-icon" src="./images/metro.png" alt="metro" />
                 Clémenceau
               </p>
             </div>
@@ -177,8 +180,8 @@
       </div>
       <div>
         <p>
-          5, rue Yves Noël, 35200 Rennes<br>
-          <img src="./images/metro.png" alt="metro"> Clémenceau
+          5, rue Yves Noël, 35200 Rennes<br />
+          <img src="./images/metro.png" alt="metro" /> Clémenceau
         </p>
       </div>
       <div>

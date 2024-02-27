@@ -210,6 +210,7 @@ header {
   width: 100%;
   min-height: 470px;
   position: relative;
+  overflow: hidden;
 }
 
 .banner-img {
@@ -314,6 +315,7 @@ header {
 #products h2 {
   margin-top: 0;
 }
+
 .bg-yellow {
   background-color: var(--third-color);
 }
@@ -361,6 +363,11 @@ header {
 
 .bg-lightblue {
   background-color: #e6f4fb;
+}
+
+#prevSlide,
+#nextSlide {
+  z-index: 1;
 }
 
 #contact {
