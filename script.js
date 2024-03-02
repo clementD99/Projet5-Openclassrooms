@@ -22,13 +22,12 @@ let currentIndex = 0;
 const banner = document.getElementById("banner");
 const tagLine = document.getElementById("tagLine");
 const image = document.querySelector(".banner-img");
-const dot = document.querySelectorAll('.dot_selected');
+const dots = document.querySelector(".dots");
 
-
-// flèches gauche et droite 
+// flèches gauche et droite
 let arrow_left = document.getElementById("prevSlide");
 let arrow_right = document.getElementById("nextSlide");
-// fin flèches gauche et droite 
+// fin flèches gauche et doite
 
 
 // permet de cliquer sur les flèches 
@@ -37,13 +36,13 @@ arrow_left.addEventListener("click", () => {
   prevSlide();
   console.log(currentIndex);
 });
-  
+
 arrow_right.addEventListener("click", () => {
   console.log("nextSlide");
   nextSlide();
   console.log(currentIndex);
 });
-// fin permet de cliquer sur les flèches
+// fin permet de cliquer sur les flèches 
 
 
 // pour faire défiler les images
@@ -57,17 +56,59 @@ function updatecarousel() {
 function nextSlide() {
   currentIndex = (currentIndex + 1) % slides.length;
   updatecarousel();
+  updateDotSelected();
 }
 
 function prevSlide() {
   currentIndex = (currentIndex - 1 + slides.length) % slides.length;
   updatecarousel();
+  updateDotSelected();
 }
 
 function createDots() {
-  for (const slide of slides) {
+  slides.forEach((slide, index) => {
     const dot = document.createElement("span");
-    dot.className = "dot";
-    dot.appendChild(dot);
-  }
+    if (index === 0) {
+      dot.className = "dot dot_selected";
+    } else {
+      dot.className = "dot";
+    }
+    dots.appendChild(dot);
+  });
 }
+
+
+function updateDots(currentIndex) {
+  const dots = document.querySelectorAll('.dot');
+  
+  dots.forEach((dot, index) => {
+    if (index === currentIndex) {
+      dot.classList.add('dot_selected');
+    } else {
+      dot.classList.remove('dot');
+    }
+  });
+}
+
+dots.addEventListener("click", () => {
+  updateImage(index);
+  updateDots(index);
+});
+
+function updateImage(index) {
+  currentIndex = index;
+  image.src = `./images/${slides[currentIndex].image}`;
+  tagLine.innerHTML = slides[currentIndex].tagLine;
+}
+
+// Fonction pour mettre à jour l'index et la classe dot_selected
+function updateDotSelected() {
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('dot_selected', index === currentIndex);
+  });
+}
+// fin Fonction pour mettre à jour l'index et la classe dot_selected
+
+createDots();
+
