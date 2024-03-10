@@ -25,22 +25,18 @@ const image = document.querySelector(".banner-img");
 const dots = document.querySelector(".dots");
 
 // flèches gauche et droite
-let arrow_left = document.getElementById("prevSlide");
-let arrow_right = document.getElementById("nextSlide");
+const arrow_left = document.getElementById("prevSlide");
+const arrow_right = document.getElementById("nextSlide");
 // fin flèches gauche et doite
 
 
 // permet de cliquer sur les flèches 
 arrow_left.addEventListener("click", () => {
-  console.log("prevSlide");
   prevSlide();
-  console.log(currentIndex);
 });
 
 arrow_right.addEventListener("click", () => {
-  console.log("nextSlide");
   nextSlide();
-  console.log(currentIndex);
 });
 // fin permet de cliquer sur les flèches 
 
